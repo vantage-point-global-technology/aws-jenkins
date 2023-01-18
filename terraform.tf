@@ -1,5 +1,11 @@
 # Define our Terraform settings
 terraform {
+  # Set environment variables in the terminal when initialising
+  # TF_TOKEN_app_terraform_io=<REDACTED> 
+  # TF_CLOUD_ORGANIZATION=vantage-point-global 
+  # TF_WORKSPACE=aws-jenkins terraform init
+  cloud {}
+  
   # We only require the AWS provider
   required_providers {
     aws = {

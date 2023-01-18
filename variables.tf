@@ -1,3 +1,6 @@
+variable "TF_CLOUD_ORGANIZATION" {}
+variable "TF_WORKSPACE" {}
+
 # Set the AWS region that 
 # everything will be created in 
 variable "aws_region" {
