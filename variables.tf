@@ -54,4 +54,9 @@ variable "subnet_cidr_blocks" {
   ]
 }
 
+variable "local_ip" {
+  description = "my IP address"
+  type = string
+}
+
 

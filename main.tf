@@ -5,19 +5,7 @@ data "aws_availability_zones" "available" {
   state = "available"
 }
 
-# Create a data object that contains
-# ifconfig dataand your IP adress
-data "http" "my_public_ip" {
-  url = "https://ifconfig.co/json"
-  request_headers = {
-    Accept = "application/json"
-  }
-}
 
-# Set a local variable
-locals {
-  ifconfig_co_json = jsondecode(data.http.my_public_ip.response_body)
-}
 
 # Create a data object that contains 
 # the latest amazon linux AMI
@@ -124,7 +112,7 @@ resource "aws_security_group" "jenkins_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["${local.ifconfig_co_json.ip}/32"]
+    cidr_blocks = ["${var.local_ip}/32"]
   }
 
   # Make the EC2 instance accessible from 
