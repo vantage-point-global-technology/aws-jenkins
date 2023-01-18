@@ -1,5 +1,9 @@
 # aws-jenkins
 
+Provision AWS VPC, public subnet, security group, route table and association, and an EC2 instance, and install Jenkins
+
+
+
 ## Prerequisites
 
 [Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
