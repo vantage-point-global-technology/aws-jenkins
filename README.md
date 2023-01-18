@@ -1,5 +1,35 @@
 # aws-jenkins
 
+## Prerequisites
+
+[Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
+
+## Provision Jenkins on EC2
+
+Create a key pair to SSH into EC2 
+```
+ssh-keygen -t rsa -b 4096 -m pem -f jenkins_kp && openssl rsa -in jenkins_kp -outform pem && chmod 400 jenkins_kp.pem
+```
+
+Initialise Terraform
+```
+terraform init
+```
+
+Create a Terraform plan
+```
+terraform plan
+```
+
+Apply the plan
+```
+terraform apply
+```
+
+Note the public_ip in the terminal output
+
+
 ## Configuring Jenkins
 Jenkins is now installed and running on your EC2 instance. To configure Jenkins:
 
