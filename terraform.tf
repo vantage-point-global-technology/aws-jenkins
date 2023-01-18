@@ -1,6 +1,5 @@
 # Define our Terraform settings
 terraform {
-  cloud {}
   # We only require the AWS provider
   required_providers {
     aws = {
