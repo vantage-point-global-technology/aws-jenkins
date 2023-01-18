@@ -1,10 +1,11 @@
 # Define our Terraform settings
 terraform {
+  cloud {}
   # We only require the AWS provider
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.16"
+      version = "~> 4.4.0"
     }
   }
   # The version of Terraform
