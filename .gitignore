@@ -13,7 +13,6 @@
 # SSH Keys
 *.pem
 jenkins_kp
-jenkins_kp.pub
 
 # Backup files
 *.bak
