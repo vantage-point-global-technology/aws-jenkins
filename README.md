@@ -16,6 +16,18 @@ Create a key pair to SSH into EC2
 ssh-keygen -t rsa -b 4096 -m pem -f jenkins_kp && openssl rsa -in jenkins_kp -outform pem && chmod 400 jenkins_kp.pem
 ```
 
+### Local usage
+
+Grab your IP address from `https://checkip.amazonaws.com/` to use in `TF_VAR_local_ip` below.
+
+Set environment variables in the terminal for the cloud storage
+```
+export TF_TOKEN_app_terraform_io=<REDACTED> 
+export TF_CLOUD_ORGANIZATION=vantage-point-global 
+export TF_WORKSPACE=aws-jenkins
+export TF_VAR_local_ip=<READACTED>
+```
+
 Initialise Terraform
 ```
 terraform init
@@ -32,7 +44,6 @@ terraform apply
 ```
 
 Note the public_ip in the terminal output
-
 
 ## Configuring Jenkins
 Jenkins is now installed and running on your EC2 instance. To configure Jenkins:
