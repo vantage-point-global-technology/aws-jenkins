@@ -1,5 +1,7 @@
 # aws-jenkins
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/vantage-point-global-technology/aws-jenkins/tree/main.svg?style=svg&circle-token=c6edb6bba9a046ebf74711601af47ee41e7bfe56)](https://dl.circleci.com/status-badge/redirect/gh/vantage-point-global-technology/aws-jenkins/tree/main)
+
 Provision AWS VPC, public subnet, security group, route table and association, and an EC2 instance, and install Jenkins
 
 
@@ -54,8 +56,12 @@ Jenkins is now installed and running on your EC2 instance. To configure Jenkins:
 
 2. As prompted, enter the password found in /var/lib/jenkins/secrets/initialAdminPassword.
 
-Use the following command to display this password:
+SSH in to the EC2 instance with the private key you created
+```
+ssh -i jenkins_kp ec2-user@<your_server_public_DNS>
+```
 
+Use the following command to display this password:
 ```
 [ec2-user ~]$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
