@@ -134,3 +134,32 @@ Use the following command to display this password:
 18. Scroll down to "Test Connection" and ensure it states "Success". Select Save when done
 
 ![Test Connection](/assets/images/test_connection.png "Test Connection")
+
+19. Configure SCM
+
+
+Change user and generate a SSH key
+![Jenkins SSH key](/assets/images/jenkins-ssh-key.png "Jenkins SSH key")
+
+```
+sudo -su jenkins 
+```
+Generate a key pair and add to ssh agent
+```
+ssh-keygen
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+```
+
+20. Copy the public key
+```
+cat /var/lib/jenkins/.ssh/id_rsa.pub
+```
+
+21. Add the public key to your Github user account
+
+
+22. Enable proxy compatibility
+
+"Manage Jenkins" > "Configure Global Security" > "Enable proxy compatibility"
+
