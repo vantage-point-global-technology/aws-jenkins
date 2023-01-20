@@ -4,14 +4,9 @@
 
 Provision AWS VPC, public subnet, security group, route table and association, and an EC2 instance, and install Jenkins
 
-
-
 ## Prerequisites
 
-### Local usage
 - [Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-
-### Contiunuous Delivery
 - [Github Account](https://github.com) for version control
 - [Terraform Cloud Account](https://app.terraform.io/) for remote state storage
 - [CircleCI Account](https://circleci.com/signup) for CI/CD
@@ -22,8 +17,7 @@ Create a key pair to SSH into EC2
 ```
 ssh-keygen -t rsa -b 4096 -m pem -f jenkins_kp && openssl rsa -in jenkins_kp -outform pem && chmod 400 jenkins_kp.pem
 ```
-
-### Local usage
+### Local Usage 
 
 Grab your IP address from `https://checkip.amazonaws.com/` to use in `TF_VAR_local_ip` below.
 
@@ -51,6 +45,20 @@ terraform apply
 ```
 
 Note the public_ip in the terminal output
+
+## Continuous Delivery (Recommended)
+Set Environment Variables in Project Settings
+
+| Name                      | Value                  | Source                                           |
+| ------------------------- | ---------------------- | ------------------------------------------------ |
+| TF_TOKEN_app_terraform_io | <REDACTED>             | Created in Terraform Cloud                       |
+| TF_CLOUD_ORGANIZATION     | "vantage-point-global" | User created                                     |
+| TF_WORKSPACE              | "aws-jenkins"          | User created                                     |
+| TF_VAR_local_ip           | <REDACTED>             | Your IP address (https://checkip.amazonaws.com/) |
+
+
+
+---------------
 
 ## Configuring Jenkins
 Jenkins is now installed and running on your EC2 instance. To configure Jenkins:
