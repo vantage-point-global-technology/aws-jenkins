@@ -8,8 +8,13 @@ Provision AWS VPC, public subnet, security group, route table and association, a
 
 ## Prerequisites
 
-[Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+### Local usage
+- [Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
+### Contiunuous Delivery
+- [Github Account](https://github.com) for version control
+- [Terraform Cloud Account](https://app.terraform.io/) for remote state storage
+- [CircleCI Account](https://circleci.com/signup) for CI/CD
 
 ## Provision Jenkins on EC2
 
