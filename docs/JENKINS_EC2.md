@@ -1,5 +1,6 @@
 # Configure Jenkins to connect to AWS 
-Jenkins is now installed and running on your EC2 instance. To configure Jenkins:
+
+Once the AWS resources have been provisioned, and the EC2 instance launched with Jenkins installed, sign in and configure Jenkins
 
 1. Connect to http://<your_server_public_DNS>:8080 from your browser. You will be able to access Jenkins through its management interface:
 
@@ -19,7 +20,7 @@ Use the following command to display this password:
 
 3. The Jenkins installation script directs you to the Customize Jenkins page. Click Install suggested plugins.
 
-4. Once the installation is complete, the Create First Admin User will open. Enter your information, and then select Save and Continue.
+4. Once the installation is complete, the "Create First Admin User" will open. Enter your information, and then select "Save and Continue".
 
 ![Admin User](assets/images/create_admin_user.png "Create Admin User")
 

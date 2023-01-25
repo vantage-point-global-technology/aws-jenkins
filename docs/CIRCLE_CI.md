@@ -1,4 +1,4 @@
-# Continuous Delivery (Recommended)
+# CircleCI
 
 ## Set Environment Variables in CircleCI Project Settings
 

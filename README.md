@@ -4,6 +4,9 @@
 ## Provision AWS Virtual Network, EC2 and Jenkins
 Provision a simple AWS Virtual Network and an EC2 instance with Jenkins installed for Continuous Delivery of AWS resources.
 
+For local testing
+[Local CLI usage](./docs/LOCAL.md)
+
 ### Prerequisites
 
 - [Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) (Optional)
@@ -21,8 +24,8 @@ ssh-keygen -t rsa -b 4096 -m pem -f jenkins_kp && openssl rsa -in jenkins_kp -ou
 
 - `https://checkip.amazonaws.com/`
 
-## Set up instructions
-- [CLI](./docs/LOCAL.md) (Only for local testing)
-- [CircleCI](./docs/CI.md) (Recommended)
-- [Configure Jenkins EC2](./docs/JENKINS_EC2.md) (Required)
-- [Confugure Jekins GitHub](./docs/JENKINS_GITHUB.md) (Required)
+## Instructions to set up Jenkins on EC2 and configure plugins and access
+1. [CircleCI](./docs/CIRLCE_CI.md)
+2. [Configure Jenkins EC2](./docs/JENKINS_EC2.md)
+3. [Configure Jenkins GitHub](./docs/JENKINS_GITHUB.md)
+4. [Configure Jenkins Terraform](./docs/JENKINS_TERRAFORM.md)
