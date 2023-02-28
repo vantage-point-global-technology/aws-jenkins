@@ -4,8 +4,8 @@
 ## Provision AWS Virtual Network, EC2 and Jenkins
 Provision a simple AWS Virtual Network and an EC2 instance with Jenkins installed for Continuous Delivery of AWS resources.
 
-**For local testing**
-[Local CLI usage](./docs/LOCAL.md)
+**For local usage**
+- [Local CLI usage](./docs/LOCAL.md)
 
 ### Prerequisites
 
