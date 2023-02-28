@@ -1,6 +1,9 @@
 # Local Usage (not recommended)
 ## Set environment variables for access to Terraform Cloud
 
+### Prerequisites
+- [Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
 **Find in your Terraform Cloud account**
 ```
 export TF_TOKEN_app_terraform_io=<REDACTED> 
