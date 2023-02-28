@@ -55,3 +55,4 @@ ssh -T git@github.com
 
 "Manage Jenkins" > "Configure Global Security" > "Enable proxy compatibility"
 
+11. [Configure Jenkins Terraform](./JENKINS_TERRAFORM.md)

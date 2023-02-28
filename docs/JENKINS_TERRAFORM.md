@@ -41,3 +41,5 @@ terraform version
 terraform -install-autocomplete
 source ~/.bashrc
 ```
+-------------
+Now you're all ready top begin writing Jenkins pipelines!!

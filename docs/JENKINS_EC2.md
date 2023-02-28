@@ -74,3 +74,5 @@ Use the following command to display this password:
 
 ![Test Connection](assets/images/test_connection.png "Test Connection")
 
+19. [Configure Jenkins GitHub](./JENKINS_GITHUB.md)
+
