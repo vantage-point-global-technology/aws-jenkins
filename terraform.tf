@@ -5,7 +5,7 @@ terraform {
   # TF_CLOUD_ORGANIZATION=vantage-point-global 
   # TF_WORKSPACE=aws-jenkins terraform init
   cloud {}
-  
+
   # We only require the AWS provider
   required_providers {
     aws = {

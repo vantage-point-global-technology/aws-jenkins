@@ -5,8 +5,6 @@ data "aws_availability_zones" "available" {
   state = "available"
 }
 
-
-
 # Create a data object that contains 
 # the latest amazon linux AMI
 data "aws_ami" "amazon_linux" {
